@@ -1,0 +1,64 @@
+/*
+ * 학기: 2023년 1학기
+ * 과목: Java프로그래밍
+ * 과제: J8
+ * 소속: IT융합자율학부
+ * 이름: 이길수
+ * 학번: 202214082
+ */
+import java.io.*;
+import java.util.*;
+
+public class AirplaneFinder {
+	HashMap<String, Airplane> h = new HashMap<String, Airplane>();
+	
+	
+	// airplane.txt 파일로부터 비행기 정보 읽기 기능
+	void readAirplaneFile() {
+		FileReader fin = null;
+		try {
+			fin = new FileReader("C:\\Java\\airplane.txt");
+			int c;
+			while((c = fin.read()) != -1) {
+				System.out.print((char)c);		
+				
+			}
+			fin.close();
+		} catch(IOException e) {
+			System.out.println("파일 입출력 오류");
+		}
+	}
+	
+	// 식별정보, 제조회사, 탑승인원을 입력받아 airplane.txt 파일에 추가 기능
+	void writeAirplaneFile() {
+		Scanner scanner = new Scanner(System.in);
+		String select = "";
+		FileWriter fout = null;
+		try {
+			fout = new FileWriter("C:\\Java\\airplane.txt", true);
+		} catch(IOException e) {
+			System.out.println("파일 입출력 오류");
+		}
+		System.out.print("새로운 비행기 정보를 입력하시겠습니까? (Y/N): ");
+		select = scanner.next();
+		if(select.equals("Y")) {
+			System.out.print("비행기 식별번호: ");
+			select = scanner.next();
+			System.out.print("비행기 제조회사: ");
+			select = scanner.next();
+			System.out.print("비행기 탑승인원: ");
+			int  = scanner.next();
+		} else {
+			
+		}
+	}
+	
+	// 식별번호를 이용해 비행기 정보 검색 기능
+	void findAirplane() {
+		
+	}
+	
+	public static void main(String[] args) {
+		
+	}
+}

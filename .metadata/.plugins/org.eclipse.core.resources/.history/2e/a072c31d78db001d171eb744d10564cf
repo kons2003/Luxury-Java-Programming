@@ -1,0 +1,68 @@
+/*
+ * 학기: 2023년 1학기
+ * 과목: Java프로그래밍
+ * 과제: J3_1
+ * 소속: IT융합자율학부
+ * 이름: 이길수
+ * 학번: 202214082
+ */
+import java.util.InputMismatchException;
+import java.util.Scanner;
+
+public class J3_1 {
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		int arr[][];
+		int i, j, n = 0;
+		
+		System.out.print("행의 개수 입력: ");
+		arr = new int[n = scanner.nextInt()][];
+		
+		for	(i = 0; i < arr.length; i++) {
+			System.out.print(i +"번 행의 열의 개수 입력: ");
+			arr[i] = new int[n = scanner.nextInt()];
+		}
+		System.out.println();
+		
+		while(true) {
+			try {
+				for (i = 0; i < arr.length; i++) {
+					for	(j = 0; j < arr[i].length; j++) {
+						System.out.print("["+i+"]["+j+"] 입력: ");
+						arr[i][j] = scanner.nextInt();
+					}
+				}
+				break;
+			} catch (InputMismatchException e) {
+				System.out.println("정수를 입력하세요.");
+				scanner.nextLine();
+			}
+		}
+		
+		System.out.println();
+		
+		for	(i = 0; i < arr.length; i++) {
+			for	(j = 0; j < arr[i].length; j++) {
+				System.out.print(arr[i][j]+" ");
+			}
+			System.out.println();
+		}
+		/*for (i = 0; i < arr.length; i++) {
+			for	(j = 0; j < arr[i].length; j++) {
+				System.out.print("["+i+"]["+j+"] 입력: ");
+				arr[i][j] = scanner.nextInt();
+			}
+		}
+		System.out.println();
+		
+		for	(i = 0; i < arr.length; i++) {
+			for	(j = 0; j < arr[i].length; j++) {
+				System.out.print(arr[i][j]+" ");
+			}
+			System.out.println();
+		} */
+		
+		
+		scanner.close();
+	}
+}

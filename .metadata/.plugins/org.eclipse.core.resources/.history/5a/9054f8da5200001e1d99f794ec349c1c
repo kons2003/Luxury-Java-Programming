@@ -1,0 +1,8 @@
+package Ex8_5;
+
+public class FileStreamEx {
+	public static void main(String[] args) {
+		FileOutputStream fout = new FileOutputStream("C:\\Java1630\\test.out");
+		
+	}
+}

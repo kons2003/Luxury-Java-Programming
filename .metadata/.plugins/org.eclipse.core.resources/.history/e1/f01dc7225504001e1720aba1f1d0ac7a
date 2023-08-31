@@ -1,0 +1,36 @@
+/*
+ * 학기: 2023년 1학기
+ * 과목: Java프로그래밍
+ * 과제: J8
+ * 소속: IT융합자율학부
+ * 이름: 이길수
+ * 학번: 202214082
+ */
+public class Airplane {
+	private String id;
+	private String company;
+	private int passenger;
+	
+	public Airplane(String id, String company, int passenger) {
+		this.id = id;
+		this.company = company;
+		this.passenger = passenger;
+	}
+	
+	public String getID() {
+		return id;
+	}
+	
+	public String getCompany() {
+		return company;
+	}
+	
+	public int getPassenger() {
+		return passenger;
+	}
+	
+	@Override
+	public String toString() {
+		return id+' '+company+' '+passenger;
+	}
+}

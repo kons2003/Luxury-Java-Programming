@@ -1,0 +1,9 @@
+package Ex8_4;
+
+import java.io.*;
+
+public class FileWriterEx {
+	public static void main(String[] args) {
+		
+	}
+}
